@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js简介</title>
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script>
+        document.write("<h1>这是一个标题</h1>");
+        document.write("<p>这是一个段落。</p>");
+
+        function setButtonName(button){
+            document.getElementById("mButton").innerHTML = "Hello ZhangYe" ;
+            button.innerHTML = "Hello ZhangYe" ;
+        }
+        var b = false ;
+        function setImage(img){
+            if(img == null ) return ;
+            if(b){
+                img.src = "../img/2.jpg" ;
+                b = false ;
+            }else{
+                img.src = "../img/1.jpg" ;
+                b = true ;
+            }
+        }
+
+        function mulit(){
+
+        }
+    </script>
+</head>
+<body>
+    <button id="mButton" type="button" onclick="setButtonName(this)"> 点我 </button>
+    <button  type="button" onclick="setButtonName(this)"> 点我 </button>
+    <button  type="button" onclick="setButtonName(this)"> 点我 </button>
+    <button  type="button" onclick="setButtonName(this)"> 点我 </button>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-success">成功按钮</button>
+    </div>
+</body>
+</html>
